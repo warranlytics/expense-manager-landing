@@ -1,36 +1,167 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Expense Manager - Landing Page
 
-## Getting Started
+A modern, responsive landing page for the Expense Manager platform built with Next.js 15 and Tailwind CSS. This is a static site (SSG) showcasing the features and benefits of the Expense Manager application.
 
-First, run the development server:
+## ✨ Features
+
+- 🎨 **Modern Design** - Clean, professional design with gradient backgrounds and smooth animations
+- 📱 **Fully Responsive** - Optimized for all screen sizes (mobile, tablet, desktop)
+- ⚡ **Static Site Generation (SSG)** - Pre-rendered at build time for optimal performance
+- 🎯 **SEO Optimized** - Proper meta tags, Open Graph tags, and semantic HTML
+- 🚀 **Lightning Fast** - Built with Next.js 15 and Turbopack
+- 🎭 **Smooth Animations** - Hover effects and transitions for better UX
+- ♿ **Accessible** - Semantic HTML and ARIA labels where needed
+
+## 🛠️ Tech Stack
+
+- **Next.js 15** - React framework with App Router
+- **React 18** - UI library
+- **Tailwind CSS** - Utility-first CSS framework
+- **TypeScript** - Type-safe JavaScript (via JSConfig)
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 20+
+- pnpm (recommended) or npm
+
+### Installation
+
+1. Install dependencies:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Development
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Run the development server:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+pnpm run dev
+```
 
-## Learn More
+Open [http://localhost:3000](http://localhost:3000) to view the landing page.
 
-To learn more about Next.js, take a look at the following resources:
+### Build
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Build the static site for production:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+pnpm run build
+```
 
-## Deploy on Vercel
+This generates a static export in the `out/` directory.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Preview
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Preview the production build locally:
+
+```bash
+npx serve@latest out
+```
+
+## 📁 Project Structure
+
+```
+expense-manager-landing/
+├── src/
+│   └── app/
+│       ├── favicon.ico        # Favicon
+│       ├── globals.css        # Global styles
+│       ├── layout.js          # Root layout with metadata
+│       └── page.js            # Landing page (main content)
+├── public/                    # Static assets
+├── next.config.mjs           # Next.js configuration (SSG enabled)
+├── tailwind.config.js        # Tailwind CSS configuration
+├── package.json              # Dependencies and scripts
+└── README.md                 # This file
+```
+
+## 📄 Page Sections
+
+1. **Hero Section** - Headline, CTA, and key statistics
+2. **Features Section** - 6 key features with icons
+3. **How It Works** - 3-step process explanation
+4. **Tech Stack** - Technologies showcase
+5. **CTA Section** - Sign-up encouragement
+6. **Footer** - Quick links and information
+
+## ⚙️ Configuration
+
+### Static Site Generation
+
+Configured in `next.config.mjs`:
+
+```javascript
+const nextConfig = {
+	output: 'export', // Enable static export
+	images: {
+		unoptimized: true,
+	},
+};
+```
+
+### SEO Metadata
+
+Configured in `src/app/layout.js`:
+
+```javascript
+export const metadata = {
+	title: 'Expense Manager - Take Control of Your Personal Finances',
+	description: 'Track expenses, analyze spending patterns...',
+	keywords: ['expense tracker', 'finance management', 'budgeting'],
+};
+```
+
+## 🎨 Customization
+
+### Content
+
+Edit `src/app/page.js` to modify landing page content.
+
+### Styling
+
+- **Colors**: Update `tailwind.config.js`
+- **Fonts**: Modify font imports in `src/app/layout.js`
+- **Global styles**: Edit `src/app/globals.css`
+
+## 🚀 Deployment
+
+### Vercel (Recommended)
+
+```bash
+vercel
+```
+
+### Netlify
+
+```bash
+pnpm run build
+netlify deploy --prod --dir=out
+```
+
+### Docker + Nginx
+
+```dockerfile
+FROM nginx:alpine
+COPY out/ /usr/share/nginx/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
+```
+
+```bash
+docker build -t expense-manager-landing .
+docker run -p 80:80 expense-manager-landing
+```
+
+## 🔗 Related Projects
+
+- **expense-manager-apis** - Backend REST API
+- **expense-manager-app** - Frontend web application
+- **expense-manager-loadbalancer** - Nginx load balancer
+
+## 📝 License
+
+Part of the Expense Manager platform.

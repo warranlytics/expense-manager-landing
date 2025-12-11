@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  /* config options here */
+  output: 'export', // Enable static export (SSG)
+  images: {
+    unoptimized: true, // Required for static export
+  },
 };
 
 export default nextConfig;

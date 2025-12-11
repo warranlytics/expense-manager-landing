@@ -1,0 +1,31 @@
+{
+	"name": "Expense Manager",
+	"short_name": "Expense Manager",
+	"description": "Track expenses, analyze spending patterns, and achieve your financial goals",
+	"start_url": "/",
+	"display": "standalone",
+	"background_color": "#ffffff",
+	"theme_color": "#2563eb",
+	"orientation": "portrait",
+	"icons": [
+		{
+			"src": "/favicon.svg",
+			"sizes": "any",
+			"type": "image/svg+xml",
+			"purpose": "any maskable"
+		}
+	],
+	"categories": ["finance", "productivity", "business"],
+	"shortcuts": [
+		{
+			"name": "View Dashboard",
+			"url": "/#features",
+			"description": "View expense analytics dashboard"
+		},
+		{
+			"name": "Get Started",
+			"url": "/#signup",
+			"description": "Start tracking your expenses"
+		}
+	]
+}
