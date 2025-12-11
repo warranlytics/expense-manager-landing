@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 export const metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:8000'),
   title: {
-    default: "Expense Manager - Take Control of Your Personal Finances",
-    template: "%s | Expense Manager",
+    default: "Expenser - Take Control of Your Personal Finances",
+    template: "%s | Expenser",
   },
   description: "Track expenses, analyze spending patterns, and achieve your financial goals with our intuitive expense management platform. Features multi-currency support, custom categories, real-time analytics dashboard, and secure JWT authentication.",
   keywords: [
@@ -37,7 +37,7 @@ export const metadata = {
     { name: "Shakil Ahmed", url: "https://github.com/sakilahmmad71" }
   ],
   creator: "Shakil Ahmed",
-  publisher: "Expense Manager",
+  publisher: "Expenser",
   robots: {
     index: true,
     follow: true,
@@ -59,15 +59,15 @@ export const metadata = {
     type: "website",
     locale: "en_US",
     url: process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:8000',
-    siteName: "Expense Manager",
-    title: "Expense Manager - Take Control of Your Personal Finances",
+    siteName: "Expenser",
+    title: "Expenser - Take Control of Your Personal Finances",
     description: "Track expenses, analyze spending patterns, and achieve your financial goals with our intuitive expense management platform. Features multi-currency support, custom categories, and analytics dashboard.",
     images: [
       {
         url: '/expense-manager-dashboard.png',
         width: 1200,
         height: 630,
-        alt: 'Expense Manager Dashboard',
+        alt: 'Expenser Dashboard',
       },
     ],
   },

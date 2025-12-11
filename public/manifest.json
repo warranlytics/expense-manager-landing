@@ -1,6 +1,6 @@
 {
-	"name": "Expense Manager",
-	"short_name": "Expense Manager",
+	"name": "Expenser",
+	"short_name": "Expenser",
 	"description": "Track expenses, analyze spending patterns, and achieve your financial goals",
 	"start_url": "/",
 	"display": "standalone",

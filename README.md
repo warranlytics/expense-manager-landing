@@ -1,6 +1,6 @@
-# Expense Manager - Landing Page
+# Expenser - Landing Page
 
-A modern, responsive landing page for the Expense Manager platform built with Next.js 15 and Tailwind CSS. This is a static site (SSG) showcasing the features and benefits of the Expense Manager application.
+A modern, responsive landing page for the Expenser platform built with Next.js 15 and Tailwind CSS. This is a static site (SSG) showcasing the features and benefits of the Expenser application.
 
 ## ✨ Features
 
@@ -109,7 +109,7 @@ Configured in `src/app/layout.js`:
 
 ```javascript
 export const metadata = {
-	title: 'Expense Manager - Take Control of Your Personal Finances',
+	title: 'Expenser - Take Control of Your Personal Finances',
 	description: 'Track expenses, analyze spending patterns...',
 	keywords: ['expense tracker', 'finance management', 'budgeting'],
 };
@@ -164,4 +164,4 @@ docker run -p 80:80 expense-manager-landing
 
 ## 📝 License
 
-Part of the Expense Manager platform.
+Part of the Expenser platform.

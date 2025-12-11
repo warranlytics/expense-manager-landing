@@ -1,0 +1,27 @@
+services:
+  landing:
+    build:
+      context: .
+      dockerfile: Dockerfile.development
+    container_name: expense-manager-landing-development
+    env_file:
+      - .env
+    restart: unless-stopped
+    ports:
+      - "${PORT:-8000}:8000"
+    environment:
+      - NODE_ENV=development
+      - NEXT_PUBLIC_EXPENSE_MANAGER_APP_URL=${NEXT_PUBLIC_EXPENSE_MANAGER_APP_URL:-http://localhost:5173}
+      - NEXT_PUBLIC_EXPENSE_MANAGER_API_URL=${NEXT_PUBLIC_EXPENSE_MANAGER_API_URL:-http://localhost:3000/api/v1}
+    volumes:
+      - ./src:/app/src
+      - ./public:/app/public
+      - /app/node_modules
+      - /app/.next
+    networks:
+      - expense-manager-network-development
+
+networks:
+  expense-manager-network-development:
+    driver: bridge
+    name: expense-manager-network-development
