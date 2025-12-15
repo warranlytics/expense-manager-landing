@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import { GoogleAnalytics } from '@next/third-parties/google';
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import "./globals.css";
 
 const geistSans = Geist({
@@ -101,6 +102,7 @@ export default function RootLayout({ children }) {
       </body>
       <GoogleAnalytics gaId="G-MMJ960HSSC" />
       <Analytics />
+      <SpeedInsights />
     </html>
   );
 }
