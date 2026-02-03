@@ -80,11 +80,19 @@ export const metadata = {
     telephone: false,
   },
   icons: {
-    icon: '/favicon-new.svg',
+    icon: [
+      { url: '/favicon-new.svg', type: 'image/svg+xml' },
+      { url: '/icon-192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/icon-512.png', sizes: '512x512', type: 'image/png' },
+    ],
     shortcut: '/favicon-new.svg',
-    apple: '/favicon-new.svg',
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+      { url: '/apple-touch-icon.svg', type: 'image/svg+xml' },
+    ],
   },
   manifest: '/manifest.json',
+  themeColor: '#111827',
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -138,7 +146,7 @@ export const metadata = {
     'apple-mobile-web-app-status-bar-style': 'default',
     'apple-mobile-web-app-title': 'Expenser',
     'mobile-web-app-capable': 'yes',
-    'msapplication-TileColor': '#3b82f6',
+    'msapplication-TileColor': '#111827',
     'msapplication-config': '/browserconfig.xml',
   },
   bookmarks: process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:8000',
